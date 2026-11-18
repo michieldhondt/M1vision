@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M1 Vision | Michiel Dhondt, content creator</title>
+<meta name="description" content="Portfolio van Michiel Dhondt (M1 Vision): short-form video, social media en content met resultaat. Projecten voor Beleef, Bumane, Elexys en M1lobeats.">
+<meta property="og:title" content="M1 Vision | Michiel Dhondt">
+<meta property="og:description" content="Short-form video en social media content met resultaat.">
+<meta property="og:image" content="michiel-hero.jpg">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--blauw:#3FD8FF;--blauw-gloed:rgba(63,216,255,.55);--rood:#E3342C;--gloed:rgba(227,52,44,.55);--zwart:#000;--kaart:#0b0b0b;--lijn:#1f1f1f;--tekst:#ececec;--zacht:#9a9a9a;--wit:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--zwart);color:var(--tekst);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.kop{font-family:Montserrat,sans-serif;color:var(--wit);line-height:1.05;letter-spacing:-.02em}
+.neon{color:var(--blauw);text-shadow:0 0 16px var(--blauw-gloed),0 0 40px rgba(63,216,255,.35)}
+.neon.rood{color:var(--rood);text-shadow:0 0 18px var(--gloed),0 0 42px rgba(227,52,44,.35)}
+
+/* nav */
+nav{position:absolute;top:0;left:0;right:0;z-index:20}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:76px}
+nav ul{display:flex;gap:28px;list-style:none;font-family:Montserrat;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+nav ul.r{justify-content:flex-end}
+nav ul a{text-decoration:none;color:#cfcfcf;transition:color .2s,text-shadow .2s}
+nav ul a:hover{color:var(--wit);text-shadow:0 0 12px var(--blauw-gloed)}
+.merk{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Montserrat;font-weight:900;letter-spacing:.08em;font-size:15px;color:var(--wit)}
+.merk img{height:28px;width:auto}
+@media(max-width:720px){nav .wrap{grid-template-columns:auto 1fr}nav ul.l{display:none}nav ul.r{gap:16px;font-size:11px}.merk span{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding-top:110px;isolation:isolate}
+.hero::before{content:"";position:absolute;z-index:-1;left:50%;top:44%;width:min(1100px,150vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle at 38% 50%,rgba(227,52,44,.5) 0%,rgba(198,45,40,.2) 26%,transparent 50%),radial-gradient(circle at 64% 46%,rgba(63,216,255,.42) 0%,rgba(30,140,200,.16) 26%,transparent 50%);filter:blur(10px);animation:puls 6s ease-in-out infinite}
+@keyframes puls{50%{opacity:.75;transform:translate(-50%,-50%) scale(1.05)}}
+.hero-raster{flex:1;display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:28px;align-items:center}
+.label{display:inline-flex;align-items:center;gap:10px;font-family:Montserrat;font-weight:700;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#d0d0d0}
+.label::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blauw);box-shadow:0 0 10px var(--blauw),0 0 22px var(--blauw)}
+.hero h1{font-size:clamp(38px,4.6vw,64px);font-weight:700;margin:18px 0 18px}
+.hero .intro{max-width:420px;font-size:15px;color:#bdbdbd}
+.knoppen{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.knop{display:inline-flex;align-items:center;gap:12px;padding:8px 8px 8px 22px;border-radius:999px;font-family:Montserrat;font-weight:700;font-size:13px;text-decoration:none;background:var(--wit);color:#000;transition:transform .15s,box-shadow .2s}
+.knop i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#000;color:#fff;font-style:normal;font-size:14px}
+.knop:hover{transform:translateY(-2px);box-shadow:0 0 28px rgba(255,255,255,.25)}
+.knop.donker{background:rgba(255,255,255,.06);color:var(--wit);border:1px solid #333;padding:14px 22px;backdrop-filter:blur(6px)}
+.knop.donker:hover{border-color:var(--blauw);box-shadow:0 0 24px var(--blauw-gloed)}
+.knop.rood{background:var(--rood);color:#fff;box-shadow:0 0 26px var(--gloed)}
+.knop.rood i{background:#fff;color:var(--rood)}
+.portret{position:relative;justify-self:center;width:min(340px,80vw)}
+.portret img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:200px 200px 24px 24px;border:1px solid rgba(63,216,255,.5);box-shadow:0 0 0 1px rgba(63,216,255,.2),0 0 40px rgba(63,216,255,.45),0 0 120px rgba(227,52,44,.25)}
+.portret .mark{position:absolute;right:-14px;bottom:-14px;width:74px;height:74px;border-radius:50%;background:#000;border:1px solid #333;display:grid;place-items:center;box-shadow:0 0 24px rgba(227,52,44,.5)}
+.portret .mark img{width:44px;aspect-ratio:auto;border:0;box-shadow:none;border-radius:0}
+.cijfers{display:grid;gap:26px;justify-items:end;text-align:right}
+.cijfer b{display:block;font-family:Montserrat;font-weight:500;font-size:clamp(40px,4.4vw,60px);line-height:1;color:var(--wit);letter-spacing:-.03em}
+.cijfer span{display:block;margin-top:6px;font-size:13px;color:var(--zacht);max-width:210px;margin-left:auto}
+.woordmerk{font-family:Montserrat;font-weight:900;font-size:clamp(64px,17.2vw,236px);line-height:.8;letter-spacing:-.04em;color:var(--wit);text-align:center;white-space:nowrap;margin-top:40px;transform:translateY(.1em);text-shadow:0 0 50px rgba(63,216,255,.35)}
+.woordmerk em{font-style:normal;color:var(--rood);text-shadow:0 0 24px var(--gloed),0 0 70px rgba(227,52,44,.6)}
+@media(max-width:900px){
+  .hero-raster{grid-template-columns:1fr;gap:36px;padding-bottom:10px}
+  .portret{order:-1;width:min(240px,62vw)}
+  .cijfers{grid-template-columns:repeat(3,1fr);justify-items:start;text-align:left;gap:14px}
+  .cijfer b{font-size:34px}
+  .cijfer span{margin-left:0;font-size:12px}
+}
+
+/* secties */
+section{padding:100px 0;position:relative}
+.sectiekop{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:48px}
+.sectiekop h2{font-size:clamp(34px,5.4vw,64px);font-weight:800;margin-top:14px}
+.sectiekop p{max-width:420px;color:var(--zacht)}
+.gloed-rand{border-top:1px solid var(--lijn)}
+.gloed-rand::before{content:"";position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:min(600px,80%);height:1px;background:linear-gradient(90deg,transparent,var(--blauw),transparent);box-shadow:0 0 18px var(--blauw)}
+
+/* projecten */
+.project{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:start;padding:56px 0;border-top:1px solid var(--lijn)}
+.project:first-of-type{border-top:0;padding-top:0}
+.project .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pil{font-family:Montserrat;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid #2c2c2c;color:#cfcfcf}
+.pil.blauw{border-color:rgba(63,216,255,.5);color:var(--blauw);box-shadow:0 0 14px rgba(63,216,255,.2)}
+.project h3{font-size:clamp(28px,3.4vw,42px);font-weight:800}
+.project .doel{margin-top:12px;color:#bdbdbd}
+.project h4{font-family:Montserrat;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--wit);margin:26px 0 10px}
+.gedaan{list-style:none;display:grid;gap:9px}
+.gedaan li{position:relative;padding-left:22px;color:#c9c9c9;font-size:15px}
+.gedaan li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:2px;background:var(--rood);box-shadow:0 0 8px var(--rood)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-top:4px}
+.stat{background:var(--kaart);border:1px solid var(--lijn);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-family:Montserrat;font-weight:800;font-size:28px;line-height:1.1}
+.stat span{display:block;font-size:12.5px;color:var(--zacht);margin-top:4px;line-height:1.4}
+.bron{font-size:12px;color:#666;margin-top:10px}
+.beelden{display:grid;gap:14px}
+.beelden.twee{grid-template-columns:.62fr 1fr;align-items:start}
+.beelden .kolom{display:grid;gap:14px}
+.vak{border:1px solid var(--lijn);border-radius:16px;overflow:hidden;background:#fff;transition:box-shadow .25s,border-color .25s}
+.vak:hover{border-color:rgba(63,216,255,.6);box-shadow:0 0 40px rgba(63,216,255,.22)}
+.vak img{width:100%}
+.vak.zwart{background:#000}
+.vak video{width:100%;display:block;aspect-ratio:1;background:#000}
+.onderschrift{font-size:12.5px;color:var(--zacht);margin-top:-6px}
+@media(max-width:900px){.project{grid-template-columns:1fr;gap:28px}.project .beelden{order:2}}
+
+/* tijdlijn */
+.tijdlijn{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.periode{background:var(--kaart);border:1px solid var(--lijn);border-radius:18px;padding:26px 24px;position:relative;overflow:hidden}
+.periode::after{content:"";position:absolute;left:0;top:0;right:0;height:2px;background:linear-gradient(90deg,var(--rood),var(--blauw));box-shadow:0 0 14px var(--blauw)}
+.periode .jaar{font-family:Montserrat;font-weight:900;font-size:40px;line-height:1;color:var(--wit)}
+.periode h3{font-size:18px;font-weight:800;margin:14px 0 2px}
+.periode .rol{font-size:13px;color:var(--blauw);font-weight:600}
+.periode ul{list-style:none;margin-top:14px;display:grid;gap:7px}
+.periode li{font-size:14px;color:#bdbdbd;padding-left:16px;position:relative}
+.periode li::before{content:"›";position:absolute;left:0;color:var(--rood)}
+
+/* video's */
+.raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;align-items:start}
+.kaart{background:var(--kaart);border:1px solid var(--lijn);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,box-shadow .25s,transform .25s}
+.kaart:hover{border-color:rgba(63,216,255,.6);box-shadow:0 0 0 1px rgba(63,216,255,.25),0 0 40px rgba(63,216,255,.25);transform:translateY(-3px)}
+.kaart .media{position:relative;aspect-ratio:9/16;background:#000;overflow:hidden}
+.kaart .media.breed{aspect-ratio:16/9}
+.kaart .media.vierkant{aspect-ratio:1}
+.kaart iframe,.kaart video,.kaart .media>img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.kaart .media.ig{aspect-ratio:auto;min-height:560px;background:#fff}
+.kaart .ig .instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:100%!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.kaart .ig iframe{position:static}
+.kaart .ig blockquote>a{display:block;padding:40px 20px;text-align:center;color:#111;font-weight:600}
+.kaart .info{padding:18px 20px 20px}
+.kaart h3{font-size:17px;font-weight:800}
+.kaart .info p{font-size:14px;color:var(--zacht);margin-top:4px}
+.kaart .info a{font-size:13px;font-weight:600;color:var(--wit);text-decoration:none;display:inline-block;margin-top:10px;border-bottom:1px solid var(--blauw)}
+.leeg .media{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:radial-gradient(circle at 50% 45%,rgba(63,216,255,.16),transparent 60%),#070707;text-align:center;padding:20px}
+.leeg .media img{position:static;width:70px;height:auto;opacity:.6;filter:drop-shadow(0 0 14px rgba(63,216,255,.7))}
+.leeg .kop{font-size:13px;font-weight:800;color:#777;letter-spacing:.16em;text-transform:uppercase}
+
+/* ontwerp */
+.ontwerpen{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:22px}
+.ontwerp{display:block;text-decoration:none;background:var(--kaart);border:1px solid var(--lijn);border-radius:18px;overflow:hidden;transition:border-color .25s,box-shadow .25s,transform .25s}
+.ontwerp:hover{border-color:rgba(63,216,255,.6);box-shadow:0 0 40px rgba(63,216,255,.25);transform:translateY(-3px)}
+.ontwerp img{width:100%;aspect-ratio:1.4;object-fit:cover;object-position:top;background:#fff}
+.ontwerp .info{padding:16px 20px 18px}
+.ontwerp h3{font-size:17px;font-weight:800}
+.ontwerp p{font-size:14px;color:var(--zacht);margin-top:4px}
+
+/* over */
+.over{display:grid;grid-template-columns:1fr 1.25fr;gap:60px;align-items:center}
+.over .foto{width:100%;border-radius:18px;border:1px solid var(--lijn);box-shadow:0 0 50px rgba(63,216,255,.15)}
+.over .groot{font-family:Montserrat;font-weight:700;font-size:clamp(26px,3.2vw,38px);line-height:1.15;color:var(--wit);letter-spacing:-.02em;margin:16px 0 18px}
+.over .tekst p{color:#b5b5b5}
+.over .tekst p+p{margin-top:14px}
+.feiten{list-style:none;margin-top:24px;border-top:1px solid var(--lijn)}
+.feiten li{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--lijn);font-size:15px}
+.feiten li b{font-weight:600;color:var(--wit)}
+.feiten li span{color:var(--zacht);text-align:right}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{font-size:13px;font-weight:600;padding:8px 14px;border:1px solid #2a2a2a;border-radius:999px;color:var(--tekst)}
+@media(max-width:820px){.over{grid-template-columns:1fr;gap:28px}}
+
+/* contact */
+.contact{text-align:center;padding:130px 0;overflow:hidden;isolation:isolate}
+.contact::after{content:"";position:absolute;z-index:-1;left:50%;top:50%;width:min(900px,140vw);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle at 42% 50%,rgba(227,52,44,.34),transparent 45%),radial-gradient(circle at 60% 50%,rgba(63,216,255,.3),transparent 45%)}
+.contact img{width:90px;margin:0 auto 30px;filter:drop-shadow(0 0 16px rgba(63,216,255,.8)) drop-shadow(0 0 44px rgba(63,216,255,.4))}
+.contact h2{font-size:clamp(38px,7vw,84px);font-weight:900;text-transform:uppercase;letter-spacing:-.03em}
+.contact p{color:#c4c4c4;margin:18px auto 0;max-width:480px}
+.contact .knoppen{justify-content:center}
+footer{border-top:1px solid var(--lijn);padding:26px 0;font-size:13px;color:#6f6f6f}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <ul class="l">
+      <li><a href="#projecten">Projecten</a></li>
+      <li><a href="#ervaring">Ervaring</a></li>
+    </ul>
+    <a class="merk" href="#top"><img src="mark-wit.png" alt=""><span>M1 VISION</span></a>
+    <ul class="r">
+      <li><a href="#videos">Video's</a></li>
+      <li><a href="#over">Over mij</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-raster">
+    <div>
+      <div class="label">Michiel Dhondt · Content creator</div>
+      <h1>Content die<br><span class="neon">blijft hangen.</span></h1>
+      <p class="intro">Ik bouwde de Instagram van Beleef op vanaf nul, maakte en testte video-ads voor Bumane, liet mijn eigen TikTok groeien tot 2,5K volgers en was de eerste marketeer bij Elexys. Hieronder zie je wat dat opleverde.</p>
+      <div class="knoppen">
+        <a class="knop" href="#projecten">Bekijk mijn projecten <i>↗</i></a>
+        <a class="knop donker" href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="portret">
+      <img src="michiel-hero.jpg" alt="Michiel Dhondt">
+      <div class="mark"><img src="mark-wit.png" alt="M1 Vision"></div>
+    </div>
+    <div class="cijfers">
+      <div class="cijfer"><b>74,6K</b><span>weergaven op de Instagram van Beleef in vier weken</span></div>
+      <div class="cijfer"><b>2,5K</b><span>volgers op mijn eigen TikTok</span></div>
+      <div class="cijfer"><b>550+</b><span>websitebezoekers in een halfuur voor Elexys</span></div>
+    </div>
+  </div>
+  <div class="woordmerk" aria-hidden="true">M<em>1</em> VISION</div>
+</header>
+
+<section id="projecten" class="gloed-rand">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div>
+        <div class="label">Projecten</div>
+        <h2>Wat ik <span class="neon">gedaan</span> heb</h2>
+      </div>
+      <p>Per project: het doel, wat ik zelf deed en wat het opleverde.</p>
+    </div>
+
+    <!-- BELEEF -->
+    <article class="project">
+      <div>
+        <div class="meta"><span class="pil blauw">Beleef (Swave)</span><span class="pil">2025</span><span class="pil">Stage marketing</span></div>
+        <h3>Instagram vanaf nul opgebouwd</h3>
+        <p class="doel">Doel: 10.000 nieuwe actieve gebruikers voor de Beleef-app in Kortrijk, met een zeer beperkt budget.</p>
+        <h4>Wat ik deed</h4>
+        <ul class="gedaan">
+          <li>De Instagram-pagina volledig vanaf nul opgezet en gevuld met short-form content.</li>
+          <li>Campagnes van A tot Z uitgewerkt: script schrijven, filmen, monteren en adverteren via Meta.</li>
+          <li>Een video die organisch al goed scoorde extra gepusht via Meta, en wie langer dan 3 seconden keek kreeg een retargetvideo. Alles samen voor minder dan €150.</li>
+          <li>Samengewerkt met influencers en verschillende groeistrategieën getest.</li>
+          <li>Pushnotificaties naar app-gebruikers en folders in InDesign die in heel Kortrijk verspreid werden.</li>
+          <li>Afspraken geregeld met winkels en horecazaken via WhatsApp Business, e-mail en coldcalling.</li>
+        </ul>
+        <h4>Resultaat</h4>
+        <div class="stats">
+          <div class="stat"><b class="neon">74,6K</b><span>weergaven</span></div>
+          <div class="stat"><b class="neon">27,5K</b><span>accounts bereikt</span></div>
+          <div class="stat"><b class="neon">17,7K</b><span>views op één video, 80% niet-volgers</span></div>
+          <div class="stat"><b class="neon">+192%</b><span>volgers</span></div>
+        </div>
+        <p class="bron">Instagram-statistieken, 23 mei tot 19 juni 2025.</p>
+      </div>
+      <div class="beelden twee">
+        <div class="vak"><img src="cases/beleef-feed.jpg" alt="Instagram-feed van Beleef met short-form video's en hun weergaven" loading="lazy"></div>
+        <div class="kolom">
+          <div class="vak"><img src="cases/beleef-instagram.jpg" alt="Instagram-statistieken van Beleef" loading="lazy"></div>
+          <div class="vak"><img src="cases/beleef-17k.jpg" alt="17.728 weergaven op één video, 79,5% niet-volgers" loading="lazy"></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- BUMANE -->
+    <article class="project">
+      <div>
+        <div class="meta"><span class="pil blauw">Bumane · Kortrijk</span><span class="pil">2024</span><span class="pil">Stage marketing</span></div>
+        <h3>Video-ads die massagestoelen verkopen</h3>
+        <p class="doel">Doel: massagestoelen online verkopen via Meta-advertenties.</p>
+        <h4>Wat ik deed</h4>
+        <ul class="gedaan">
+          <li>Video's en foto's voor de advertenties grotendeels zelf gemaakt in Premiere Pro, Photoshop en Canva.</li>
+          <li>De video-ad voor de Bumane Cloud gemonteerd en voorzien van mijn eigen gecomponeerde muziek.</li>
+          <li>Uitgebreide A/B-tests: dezelfde foto met een andere boodschap ("Relax", "Exclusieve aanbieding", "Pre-order") om te zien wat het best werkt.</li>
+          <li>Advertenties zelf opgezet en gelanceerd via Meta Ads.</li>
+          <li>Nieuwsbrieven via Mailchimp en webpagina's onderhouden in Shopify, WordPress en Wix.</li>
+        </ul>
+        <h4>Resultaat</h4>
+        <div class="stats">
+          <div class="stat"><b class="neon">24</b><span>advertenties getest</span></div>
+          <div class="stat"><b class="neon">1.602</b><span>klikken op links</span></div>
+          <div class="stat"><b class="neon">€0,57</b><span>per linkklik</span></div>
+        </div>
+        <p class="bron">Meta Ads Manager, resultaten van 24 advertenties.</p>
+      </div>
+      <div class="beelden">
+        <div class="vak zwart"><video src="videos/bumane-ad.mp4" poster="videos/bumane-ad.jpg" controls playsinline preload="none"></video></div>
+        <p class="onderschrift">Video-ad Bumane Cloud: montage en muziek door mij.</p>
+        <div class="vak"><img src="cases/bumane-ab-test.jpg" alt="A/B-test: dezelfde foto met drie verschillende teksten" loading="lazy"></div>
+        <p class="onderschrift">A/B-test: zelfde foto, andere tekst.</p>
+        <div class="vak"><img src="cases/bumane-meta-resultaten.jpg" alt="Resultaten van de advertenties in Meta Ads Manager" loading="lazy"></div>
+      </div>
+    </article>
+
+    <!-- M1LOBEATS -->
+    <article class="project">
+      <div>
+        <div class="meta"><span class="pil blauw">M1lobeats</span><span class="pil">Eigen merk</span></div>
+        <h3>Mijn TikTok laten groeien tot 2,5K</h3>
+        <p class="doel">Doel: mijn muziekservices bekend maken via TikTok.</p>
+        <h4>Wat ik deed</h4>
+        <ul class="gedaan">
+          <li>Verschillende video-formats getest tot ik er één vond die aansloeg.</li>
+          <li>Alles zelf gemaakt: idee, opname, montage en muziek.</li>
+          <li>Het logo en de huisstijl van M1lobeats zelf ontworpen.</li>
+          <li>Dat leverde samenwerkingen met bedrijven op.</li>
+        </ul>
+        <h4>Resultaat</h4>
+        <div class="stats">
+          <div class="stat"><b class="neon">2,5K</b><span>volgers</span></div>
+          <div class="stat"><b class="neon">62K</b><span>weergaven in 7 dagen</span></div>
+          <div class="stat"><b class="neon">6.087</b><span>likes in 7 dagen</span></div>
+        </div>
+        <p class="bron">TikTok Studio, analyse over 7 dagen.</p>
+      </div>
+      <div class="beelden">
+        <div class="vak"><img src="cases/tiktok-stats.jpg" alt="TikTok-profiel van M1lobeats en statistieken uit TikTok Studio" loading="lazy"></div>
+      </div>
+    </article>
+
+    <!-- ELEXYS -->
+    <article class="project">
+      <div>
+        <div class="meta"><span class="pil blauw">Elexys</span><span class="pil">2026</span><span class="pil">Voltijds · eerste marketeer</span></div>
+        <h3>Marketing opgebouwd van nul</h3>
+        <p class="doel">Doel: meer online zichtbaarheid, kwalitatieve B2B-leads en offerteaanvragen voor sales.</p>
+        <h4>Wat ik deed</h4>
+        <ul class="gedaan">
+          <li>Als eerste marketeer zelfstandig de marketingstrategie opgebouwd.</li>
+          <li>Een reeks Instagram-posts en LinkedIn-carrousels ontworpen, met één duidelijke boodschap per beeld.</li>
+          <li>Een opvallende online postkaart-campagne bedacht en gelanceerd.</li>
+          <li>Daarnaast SEO, Google Ads, HubSpot-automatisatie en e-mailmarketing.</li>
+        </ul>
+        <h4>Resultaat</h4>
+        <div class="stats">
+          <div class="stat"><b class="neon">550+</b><span>websitebezoekers in het eerste halfuur van de campagne</span></div>
+          <div class="stat"><b class="neon">↑</b><span>meer aanvragen voor offertes en factuuranalyses</span></div>
+        </div>
+      </div>
+      <div class="beelden">
+        <div class="vak"><img src="elexys-posts.jpg" alt="Vier Instagram-posts die ik ontwierp voor Elexys" loading="lazy"></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="ervaring" class="gloed-rand">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div>
+        <div class="label">Ervaring</div>
+        <h2>Mijn <span class="neon">parcours</span></h2>
+      </div>
+    </div>
+    <div class="tijdlijn">
+      <div class="periode"><div class="jaar">2024</div><h3>Bumane, Kortrijk</h3><div class="rol">Stage marketing</div>
+        <ul><li>Advertenties maken en lanceren via Meta</li><li>Content voor Instagram, TikTok en Facebook</li><li>Websites onderhouden (Shopify, WordPress, Wix)</li></ul></div>
+      <div class="periode"><div class="jaar">2025</div><h3>Swave (Beleef), Kortrijk</h3><div class="rol">Stage marketing</div>
+        <ul><li>Campagnes van script tot advertentie</li><li>Instagram vanaf nul opgebouwd</li><li>Afspraken met winkels en horeca, ook via coldcalling</li></ul></div>
+      <div class="periode"><div class="jaar">2026</div><h3>Elexys</h3><div class="rol">Eerste marketeer, voltijds</div>
+        <ul><li>Marketingstrategie opgebouwd</li><li>Social posts, LinkedIn-carrousels en campagnes</li><li>SEO, HubSpot en e-mailmarketing</li></ul></div>
+      <div class="periode"><div class="jaar">Nu</div><h3>Arteveldehogeschool</h3><div class="rol">Postgraduaat Digital &amp; AI Marketing</div>
+        <ul><li>Avondopleiding, naast mijn werk</li><li>Eerder: Marketing- en communicatiesupport, Howest</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="videos" class="gloed-rand">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div>
+        <div class="label">Video's</div>
+        <h2>Short-form <span class="neon">werk</span></h2>
+      </div>
+      <p>Een selectie van mijn video's op Instagram.</p>
+    </div>
+    <div class="raster" id="raster"></div>
+  </div>
+</section>
+
+<section id="ontwerp" class="gloed-rand">
+  <div class="wrap">
+    <div class="sectiekop">
+      <div>
+        <div class="label">Ontwerp</div>
+        <h2>Design en <span class="neon">print</span></h2>
+      </div>
+      <p>Folders in Adobe InDesign en een eigen logo. Klik op een beeld om het groot te bekijken.</p>
+    </div>
+    <div class="ontwerpen">
+      <a class="ontwerp" href="ontwerp/beleef-folder.jpg" target="_blank" rel="noopener"><img src="ontwerp/beleef-folder.jpg" alt="Folder voor Beleef met voordelen bij Kortrijkse horeca en handelaars" loading="lazy"><div class="info"><h3>Folder Beleef Kortrijk</h3><p>Folder met voordelen bij Kortrijkse horeca en handelaars, verspreid in heel Kortrijk.</p></div></a>
+      <a class="ontwerp" href="ontwerp/m1lobeats-logo.jpg" target="_blank" rel="noopener"><img src="ontwerp/m1lobeats-logo.jpg" alt="Logo-ontwerp en huisstijl voor M1lobeats" loading="lazy" style="object-position:center"><div class="info"><h3>Logo M1lobeats</h3><p>Logo en huisstijl voor mijn eigen muziekmerk, voor merch, socials en website.</p></div></a>
+      <a class="ontwerp" href="ontwerp/kattenfolder-1.jpg" target="_blank" rel="noopener"><img src="ontwerp/kattenfolder-1.jpg" alt="Folder Hotel The Lazy Cat, buitenkant" loading="lazy"><div class="info"><h3>Folder Hotel The Lazy Cat</h3><p>Schoolproject: driedelige folder voor een kattenhotel, buitenkant.</p></div></a>
+      <a class="ontwerp" href="ontwerp/kattenfolder-2.jpg" target="_blank" rel="noopener"><img src="ontwerp/kattenfolder-2.jpg" alt="Folder Hotel The Lazy Cat, binnenkant" loading="lazy"><div class="info"><h3>Folder Hotel The Lazy Cat</h3><p>Schoolproject: binnenkant met diensten en prijzen.</p></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="over" class="gloed-rand">
+  <div class="wrap over">
+    <img class="foto" src="michiel.jpg" alt="Michiel Dhondt in de fotostudio" loading="lazy">
+    <div class="tekst">
+      <div class="label">Over mij</div>
+      <p class="groot">Ik leer door te doen, en durf eraan te beginnen.</p>
+      <p>Ik ben Michiel Dhondt uit Roeselare. Van jongs af aan ben ik leergierig: zo leerde ik mezelf via YouTube muziek produceren, en dat werd mijn eigen merk M1lobeats. Ik neem graag initiatief en pak nieuwe uitdagingen op, ook als ik vooraf nog niet weet hoe iets precies moet.</p>
+      <p>Onder de naam M1 Vision maak ik video's en beelden voor social media. Ik heb een frisse blik op wat werkt en wat viral gaat, en ik pik nieuwe dingen snel op.</p>
+      <ul class="feiten">
+        <li><b>Regio</b><span>Roeselare en omgeving</span></li>
+        <li><b>Talen</b><span>Nederlands, Engels, Frans</span></li>
+      </ul>
+      <div class="tags"><span>Premiere Pro</span><span>Photoshop</span><span>Canva</span><span>InDesign</span><span>Meta Ads</span><span>Instagram</span><span>TikTok</span><span>Muziekproductie</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact gloed-rand">
+  <div class="wrap">
+    <img src="mark-wit.png" alt="M1 Vision">
+    <h2>Samen iets<br><span class="neon">moois maken?</span></h2>
+    <p>Stuur me gerust een bericht. Ik denk graag mee over jullie volgende video.</p>
+    <div class="knoppen">
+      <a class="knop rood" href="mailto:michieldhondt3@gmail.com">michieldhondt3@gmail.com <i>↗</i></a>
+      <a class="knop donker" href="tel:+32468305805">+32 468 30 58 05</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>© <span id="jaar">2026</span> M1 Vision · Michiel Dhondt</span><span>Roeselare, België</span></div>
+</footer>
+
+<script>
+/* ============================================================
+   JOUW VIDEO'S (sectie "Video's")
+   Voeg hier een nieuwe video toe door een regel te kopiëren.
+   Soorten:
+     { soort: "instagram", link: "https://www.instagram.com/reel/XXXX/", titel: "...", tekst: "..." }
+     { soort: "youtube",   link: "https://youtu.be/XXXX", titel: "...", tekst: "...", breed: true }
+     { soort: "video",     bestand: "videos/mijnvideo.mp4", poster: "videos/mijnvideo.jpg", titel: "...", tekst: "..." }
+       (zet het mp4-bestand in de map "videos", liefst kleiner dan 25 MB;
+        voeg vierkant: true toe voor 1:1 of breed: true voor 16:9)
+   ============================================================ */
+const VIDEOS = [
+  { soort: "instagram", link: "https://www.instagram.com/reel/DKefb4vIuVo/", titel: "Reel", tekst: "Short-form video voor Instagram" },
+  { soort: "instagram", link: "https://www.instagram.com/reel/DIwPt2zoWhC/", titel: "Reel", tekst: "Short-form video voor Instagram" },
+  { soort: "instagram", link: "https://www.instagram.com/p/C_2yX4wNPln/", titel: "Video", tekst: "Video voor Instagram" },
+];
+/* Hoeveel "binnenkort"-vakjes er getoond worden zolang er weinig video's staan */
+const LEGE_VAKJES = 0;
+
+const raster = document.getElementById("raster");
+function ytId(url){ const m = url.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/); return m ? m[1] : null; }
+function kaart(v){
+  const el = document.createElement("article");
+  el.className = "kaart";
+  let media = "", knop = "";
+  if (v.soort === "instagram"){
+    media = `<div class="media ig"><blockquote class="instagram-media" data-instgrm-permalink="${v.link.split("?")[0]}" data-instgrm-version="14"><a href="${v.link}" target="_blank" rel="noopener">Bekijk deze video op Instagram</a></blockquote></div>`;
+    knop = `<a href="${v.link}" target="_blank" rel="noopener">Bekijk op Instagram ↗</a>`;
+  } else if (v.soort === "youtube"){
+    media = `<div class="media${v.breed ? " breed" : ""}"><iframe src="https://www.youtube-nocookie.com/embed/${ytId(v.link)}" loading="lazy" allowfullscreen title="${v.titel}"></iframe></div>`;
+  } else {
+    media = `<div class="media${v.breed ? " breed" : ""}${v.vierkant ? " vierkant" : ""}"><video src="${v.bestand}"${v.poster ? ` poster="${v.poster}"` : ""} controls playsinline preload="none"></video></div>`;
+  }
+  el.innerHTML = media + `<div class="info"><h3>${v.titel}</h3><p>${v.tekst || ""}</p>${knop}</div>`;
+  return el;
+}
+VIDEOS.forEach(v => raster.appendChild(kaart(v)));
+for (let i = 0; i < LEGE_VAKJES; i++){
+  const el = document.createElement("article");
+  el.className = "kaart leeg";
+  el.innerHTML = `<div class="media"><img src="mark-wit.png" alt=""><div class="kop">Nieuwe video<br>binnenkort</div></div><div class="info"><h3>Meer werk volgt</h3><p>Dit portfolio wordt regelmatig aangevuld.</p></div>`;
+  raster.appendChild(el);
+}
+if (VIDEOS.some(v => v.soort === "instagram")){
+  const s = document.createElement("script"); s.async = true; s.src = "https://www.instagram.com/embed.js"; document.body.appendChild(s);
+}
+document.getElementById("jaar").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
